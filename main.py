@@ -1,4 +1,5 @@
 import os
+from functions.get_files_info import get_files_info
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
@@ -40,4 +41,6 @@ def main():
         print(f"Prompt Tokens: {response.usage_metadata.prompt_token_count}")
         print(f"Response Tokens: {response.usage_metadata.candidates_token_count}")
     
-main()
+# main()
+
+print(get_files_info("calculator"))
